@@ -8,8 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.39.3",
-    "htmx.org": "^1.9.10"
+    "htmx.org": "^1.9.10",
+    "sql.js": "^1.13.0"
   },
   "devDependencies": {
     "vite": "^5.0.11"

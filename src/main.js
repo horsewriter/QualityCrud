@@ -1,3 +1,4 @@
+import { initDatabase } from './config/supabase.js';
 import { Router } from './lib/router.js';
 import { api } from './lib/api.js';
 import { renderGeneralInfo, renderEntityManager } from './routes/generalInfo.js';
@@ -244,7 +245,10 @@ document.addEventListener('submit', async (e) => {
   }
 });
 
-router.navigate('home');
+(async () => {
+  await initDatabase();
+  router.navigate('home');
+})();
 
 let lastRoute = null;
 setInterval(() => {
